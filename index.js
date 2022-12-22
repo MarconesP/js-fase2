@@ -24,24 +24,29 @@ questionContainer.addEventListener("click", () => {
 });
 
 btn1.addEventListener("click", () => {
-  answer.style.visibility = "visible";
+  answer.classList.add("show-response");
   answer.style.background = "green";
 });
 
 btn2.addEventListener("click", () => {
-  answer.style.visibility = "visible";
+  answer.classList.add("show-response");
   answer.style.background = "red";
 });
 
-/* Ordem de précedencia */
+/* Ordem de priorité no css. Um objeto  que contenha uma class e um id, eu em utilizo no JAVASCRIPT, a class,
+o js podera nao reconhecer a class visto que na ordem de precedencia, o #id vem antes.
+E plus puissant que tout ça cest "important!" */
 /* <div>, #id, .class, balise HTML */
+
+//-----------------------------------------------------------------//
 
 /* Mouse events */
 
 const mousemove = document.querySelector(".mousemove");
 
 window.addEventListener("mousemove", (e) => {
-  console.log(e);
+  mousemove.style.left = e.pageX + "px";
+  mousemove.style.top = e.pageY + "px";
 });
 
 // contiuation 7
