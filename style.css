@@ -9,6 +9,7 @@ body {
     margin: 0;
     color: white;
     min-height: 200vh;
+    overflow-x: hidden;
 }
 .box {
     border: 6px solid white;
@@ -43,5 +44,6 @@ p {
     transform: translate(-50%, -50%);
     border-radius: 50%;
     transition: 0.2s ease;
+    z-index: -1;
 }
 
