@@ -73,3 +73,29 @@ response.addEventListener("mouseover", () => {
 //----------------------------------------------------
 
 // KeyPress event
+
+const keypressContainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
+
+// Função responsavel pela chamada do son
+
+const ring = (key) => {
+  const audio = new Audio();
+  audio.src = key + "z.mp3";
+  audio.play();
+};
+// Função responsavel pour la recuperation de touche(recuper dans le document la touche
+//appuer pour le utilateur) changement de coulour parcial do background en reponse à l'action de appuyer sur les toucheshjjjk
+document.addEventListener("keypress", (e) => {
+  key.textContent = e.key;
+
+  if (e.key === "j") {
+    keypressContainer.style = "pink";
+  } else if (e.key === "h") {
+    keypressContainer.style.background = "teal";
+  } else {
+    keypressContainer.style.background = "red";
+  }
+
+  ring();
+});
