@@ -78,7 +78,7 @@ const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
 
 // Função responsavel pela chamada do son
-// "a" de a.mp3 não é nescessario na chamada do "src". o
+// "a" de a.mp3(.mp3) não é nescessario na chamada do "src". o
 // le son sera activé seleument par la touche "a"
 
 const ring = (key) => {
@@ -100,4 +100,19 @@ document.addEventListener("keypress", (e) => {
   }
 
   ring(e.key);
+});
+
+//---------------------------------------
+// Scroll Event
+
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  console.log(window.scrollY);
+
+  if (window.scrollY > 120) {
+    nav.style.top = 0;
+  } else {
+    nav.style.top = "-50px";
+  }
 });
