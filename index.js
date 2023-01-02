@@ -97,5 +97,5 @@ document.addEventListener("keypress", (e) => {
     keypressContainer.style.background = "red";
   }
 
-  ring();
+  ring(e.key);
 });
