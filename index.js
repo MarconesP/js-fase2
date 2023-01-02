@@ -78,10 +78,12 @@ const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
 
 // Função responsavel pela chamada do son
+// "a" de a.mp3 não é nescessario na chamada do "src". o
+// le son sera activé seleument par la touche "a"
 
 const ring = (key) => {
   const audio = new Audio();
-  audio.src = key + "z.mp3";
+  audio.src = key + ".mp3";
   audio.play();
 };
 // Função responsavel pour la recuperation de touche(recuper dans le document la touche
