@@ -131,6 +131,7 @@ select.addEventListener("input", (e) => {
   language = e.target.value;
 });
 
-form.addEventListener("submit", () => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   console.log("yes !");
 });
