@@ -133,5 +133,13 @@ select.addEventListener("input", (e) => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("yes !");
+
+  if (cgv.checked) {
+    document.querySelector("form > div").innerHTML = `
+    <h3>Pseudo : ${pseudo}</h3>
+    <h4>Langage préféré : ${language}</h4>
+    `;
+  } else {
+    alert("Veuillez accepter les CGV");
+  }
 });
