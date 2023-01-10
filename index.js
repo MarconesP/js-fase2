@@ -131,6 +131,7 @@ select.addEventListener("input", (e) => {
   language = e.target.value;
 });
 
+//inserção de balisa HTML, con js, innerHTML
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -142,4 +143,10 @@ form.addEventListener("submit", (e) => {
   } else {
     alert("Veuillez accepter les CGV");
   }
+});
+//----------------------------------------
+// Load event
+
+window.addEventListener("load", () => {
+  console.log("Document chargé !");
 });
