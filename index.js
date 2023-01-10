@@ -150,3 +150,15 @@ form.addEventListener("submit", (e) => {
 window.addEventListener("load", () => {
   console.log("Document chargé !");
 });
+//---------------------------------------
+//For each (pour chaqun/ex. ammener tous les buttons au même endroit)
+
+const boxes = document.querySelectorAll(".box");
+
+console.log(boxes);
+
+boxes.forEach((box) => {
+  box.addEventListener("click", (e) => {
+    console.log(e.target);
+  });
+});
