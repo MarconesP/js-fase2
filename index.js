@@ -159,6 +159,11 @@ console.log(boxes);
 
 boxes.forEach((box) => {
   box.addEventListener("click", (e) => {
-    console.log(e.target);
+    e.target.style.transform = "scale(0.7";
   });
 });
+//-----------------------------------------------
+//addEdventListener Vs onclick
+// document.body.onclick = function () {
+//   console.log("Click !");
+// };
