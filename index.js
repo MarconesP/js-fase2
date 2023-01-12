@@ -167,3 +167,13 @@ boxes.forEach((box) => {
 // document.body.onclick = function () {
 //   console.log("Click !");
 // };
+
+//Bubling
+document.body.addEventListener("click", () => {
+  console.log("click 1 !");
+});
+
+//Usecapture
+document.body.addEventListener("click", () => {
+  console.log("click 2 !");
+});
