@@ -195,6 +195,9 @@ document.body.addEventListener(
 // Autrement dit, pour condicitoner le utilasateur a execute une action,
 // avant de acceder le contennu suivant. Ideale avec le : Usecapture/Bubling
 
-questionContainer.addEventListener("click", () => {
+//StopPropagation, contre le click 1 no questionContainer
+
+questionContainer.addEventListener("click", (e) => {
   alert("Test !");
+  e.stopPropagation();
 });
