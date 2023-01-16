@@ -168,12 +168,20 @@ boxes.forEach((box) => {
 //   console.log("Click !");
 // };
 
-//Bubling
-document.body.addEventListener("click", () => {
-  console.log("click 1 !");
-});
+//Bublbing => Montrer à la fin(de base l'eventlister est paramétré en mode Bublbing)
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("click 1 !");
+  },
+  false
+);
 
 //Usecapture
-document.body.addEventListener("click", () => {
-  console.log("click 2 !");
-});
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("click 2 !");
+  },
+  true
+);
