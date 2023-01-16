@@ -133,7 +133,7 @@ select.addEventListener("input", (e) => {
 
 //inserção de balisa HTML, con js, innerHTML
 // preventDefault, pour se premonir contre les comportament par default
-//do navegator
+//do navegateur
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -187,3 +187,14 @@ document.body.addEventListener(
   },
   true
 );
+
+//----------------------------------------
+// Stop propagation
+// Utilizer par exemple, dans les sites informatives, où
+// pour accéder le contenu nous est presenter une fenêtre d'abonnement.
+// Autrement dit, pour condicitoner le utilasateur a execute une action,
+// avant de acceder le contennu suivant. Ideale avec le : Usecapture/Bubling
+
+questionContainer.addEventListener("click", () => {
+  alert("Test !");
+});
