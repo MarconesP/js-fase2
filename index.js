@@ -132,6 +132,8 @@ select.addEventListener("input", (e) => {
 });
 
 //inserção de balisa HTML, con js, innerHTML
+// preventDefault, pour se premonir contre les comportament par default
+//do navegator
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -168,7 +170,7 @@ boxes.forEach((box) => {
 //   console.log("Click !");
 // };
 
-//Bublbing => Montrer à la fin(de base l'eventlister est paramétré en mode Bublbing)
+//Bublbing => Montrer à la fin(de base l'eventlister est paramétré en mode Bublbing. Permet de changer l'ordre de les evénements pour l'utilisateur)
 document.body.addEventListener(
   "click",
   () => {
