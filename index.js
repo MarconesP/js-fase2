@@ -197,7 +197,20 @@ document.body.addEventListener(
 
 //StopPropagation, contre le click 1 no questionContainer
 
-questionContainer.addEventListener("click", (e) => {
-  alert("Test !");
-  e.stopPropagation();
+//
+// ----------------------------
+// BOM
+//console.log(window.innerHeigt);
+//console.log(window.srollY);
+//window.open("http://google.com", "cours js", "height=600, width=800");
+
+//confirm
+
+btn2.addEventListener("click", () => {
+  confirm("Voulez vous vraiment vous tromper ?");
+});
+btn1.addEventListener("click", () => {
+  let answer = prompt("Entrez votre nom !");
+
+  questionContainer.innerHTML = "<h3>Bravo " + answer + "</h3>";
 });
