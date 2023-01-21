@@ -212,5 +212,5 @@ btn2.addEventListener("click", () => {
 btn1.addEventListener("click", () => {
   let answer = prompt("Entrez votre nom !");
 
-  questionContainer.innerHTML = "<h3>Bravo " + answer + "</h3>";
+  questionContainer.innerHTML += "<h3>Bravo " + answer + "</h3>";
 });
