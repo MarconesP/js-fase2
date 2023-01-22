@@ -214,3 +214,24 @@ btn1.addEventListener("click", () => {
 
   questionContainer.innerHTML += "<h3>Bravo " + answer + "</h3>";
 });
+
+//setTimeout (commpteur à rebours)
+//Temps em milleseconds avant  de déclancher une action
+setTimeout(() => {
+  questionContainer.style.borderRadius = "300px";
+}, 2000);
+
+//setInteval
+
+let intervale = setInterval(() => {
+  document.body.innerHTML += `
+  <div class='box'>
+  <h2>Nouvelle Boite !</h2>
+  </div>
+  `;
+}, 1000);
+
+window.addEventListener("click", (e) => {
+  console.log(e.target);
+  clearInterval(intervale);
+});
