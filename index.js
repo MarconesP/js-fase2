@@ -221,17 +221,24 @@ setTimeout(() => {
   questionContainer.style.borderRadius = "300px";
 }, 2000);
 
-//setInteval
+//setInteval et clearInterval
 
-let intervale = setInterval(() => {
-  document.body.innerHTML += `
-  <div class='box'>
-  <h2>Nouvelle Boite !</h2>
-  </div>
-  `;
-}, 1000);
+//let intervale = setInterval(() => {
+//  document.body.innerHTML += `
+//  <div class='box'>
+// <h2>Nouvelle Boite !</h2>
+//  </div>
+//  `;
+//}, 1000);
 
-window.addEventListener("click", (e) => {
+document.body.addEventListener("click", (e) => {
   console.log(e.target);
+  clearInterval(intervale);
+});
+
+//remove(deletando div's et n'en importe quelle objet DOM/BOM)
+
+document.body.addEventListener("click", (e) => {
+  e.target.remove();
   clearInterval(intervale);
 });
